@@ -1,0 +1,205 @@
+<!Doctype html>
+<head>
+    <link rel="stylesheet" href="front.css" />
+    <title>superduperwadlee</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="mvr">
+        <div class="fas" style="background-color: blue; text-align: center;"> 
+            Recently we have received many complaints from users about site-wide blocking of their own and blocking of
+            their own activities please go to the settings off state, please visit：<strong> https://githubmemory.com/settings/account</a></strong>，20 minutes to take effect。
+         </div>
+    </div>
+    <div class="top-panel "  style="background-color: lightblue;text-align:left;margin-bottom: 5px;">
+        <a class="a-recommend" href="https://githubmemory.com">Recommend</a>
+        <a class="a-recommend" href="https://githubmemory.com/discussions">Discussions</a>
+        <a class="a-recommend" href="https://githubmemory.com/oauth/github">Github</a>
+    </div>
+        <div >
+            <select class="drop-down-panel " name="sort" style="width:200px;text-align: left;">
+                <option value="1">Best match</option>
+                <option value="2">Most stars</option>
+                <option value="3">Fewest stars</option>
+                <option value="4">Most forks</option>
+                <option value="5">Fewest forks</option>
+                <option value="6">Recently updated</option>
+                <option value="7">Least recently updated</option>
+            </select>
+        </div><br/>
+    <div id='app' class="container ">
+        <div class="row"></div>
+        <div class="col-md-9"></div>
+
+        <script>
+            var search_result =
+             {
+                
+                "items": [
+                    {
+                        "name": "Python",
+                        "full_name": "TheAlgorithms/Python",
+                        "owner": {
+                            "login":"TheAlgorithms",
+                             "avatar_url": "https://avatars.githubusercontent.com/u/698437?v=4&amp;s=52",
+                        },
+                        "html_url": "https://github.com/TheAlgorithms/Python",
+                        "description": "javascript style guide",
+                        "html_url2":"https://githubmemory.com/@TheAlgorithms",
+                        "description1":"updated 5 hours ago",
+                        "rating":"12.4w",
+                        "*":{
+                            "alignment":"middle",
+                        },
+                        
+                    },
+                    {
+                        "name": "Python",
+                        "full_name": "TheAlgorithms/Python",
+                        "owner": {
+                            "login":"TheAlgorithms",
+                             "avatar_url": "https://avatars.githubusercontent.com/u/1170130?v=4&amp;s=52",
+                        },
+                        "html_url": "https://githubmemory.com/repo/geekcomputers/Python",
+                        "description": "my python examples",
+                        "html_url2":"https://githubmemory.com/@geekcomputers",
+                        "description1":"updated 1 hour ago",
+                        "rating":"2.42w",
+
+
+                    },
+                    {
+                        "name": "Python",
+                        "full_name": "TheAlgorithms/Python",
+                        "owner": {
+                            "login":"TheAlgorithms",
+                             "avatar_url": "https://avatars.githubusercontent.com/u/12378130?v=4&amp;s=52",
+                        },
+                        "html_url": "https://githubmemory.com/repo/walter201230/Python",
+                        "description": " walterlo python examples",
+                        "html_url2":"https://githubmemory.com/@injetlee",
+                        "description1":"updateg 3 hours ago",
+                        "rating":"1.09w",
+
+                    },
+                    {
+                        "name": "Python",
+                        "full_name": "TheAlgorithms/Python",
+                        "owner": {
+                            "login":"TheAlgorithms",
+                             "avatar_url": "https://avatars.githubusercontent.com/u/16176848?v=4&amp;s=52",
+                        },
+                        "html_url": "https://githubmemory.com/repo/injetlee/Python",
+                        "description": "  python ",
+                        "html_url2":"https://githubmemory.com/@kubernetes-client",
+                        "description1":"updated 1 day ago" ,
+                        "rating":"7.3w",   
+                    },
+                    {
+                        "name": "Python",
+                        "full_name": "TheAlgorithms/Python",
+                        "owner": {
+                            "login":"TheAlgorithms",
+                             "avatar_url": "https://avatars.githubusercontent.com/u/26615988?v=4&amp;s=52",
+                        },
+                        "html_url": "https://githubmemory.com/repo/kubernetes-client/Python",
+                        "description": " official python code library for kubernetes ",
+                        "html_url2":"https://githubmemory.com/@Show-Me-the-Code",
+                        "description1":"updated 1 hour ago" ,
+                        "rating":"7.3w", 
+                    },
+                    {
+                        "name": "Python",
+                        "full_name": "TheAlgorithms/Python",
+                        "owner": {
+                            "login":"TheAlgorithms",
+                             "avatar_url": " https://avatars.githubusercontent.com/u/9983575?v=4&amp;s=52",
+                        },
+                        "html_url": "https://githubmemory.com/repo/Show-Me-the-Code/python",
+                        "description": " show me the code python version ",
+                        "html_url2":"https://githubmemory.com/repo/xxg1413/python",
+                        "description1":"updated 1 hour ago" ,
+                        "rating":"7.3w",  
+                    },
+                    {
+                        "name": "Python",
+                        "full_name": "TheAlgorithms/Python",
+                        "owner": {
+                            "login":"TheAlgorithms",
+                             "avatar_url": "  https://avatars.githubusercontent.com/u/6810611?v=4&amp;s=52",
+                        },
+                        "html_url": "https://githubmemory.com/repo/joeyajames/Python",
+                        "description": " python code for youtube vedios ",
+                        "html_url2":"https://githubmemory.com/@joeyajames",
+                        "description1":"updated 9 hour ago" ,
+                        "rating":"7.3w", 
+                    }
+                    
+                    
+                        ]
+                    }
+                
+        
+                let transformed = search_result["items"].map((value) => {
+                return {
+                    "icon": value["owner"]["avatar_url"],
+                    "repository_link": value.html_url,
+                    "repository_link2":value.html_url2,
+                    "description": value.description,
+                    "description1":value.description1,
+                    "rating":value.rating,
+                    
+                    
+                }
+    
+            })
+            console.log(transformed);
+    
+    
+            const element = document.getElementById("app");
+            transformed.forEach(repo => {
+                let div = document.createElement("div");
+                div.classList = "p-3 border bg-light";
+                let inner = document.createElement("p");
+                let img = document.createElement("img");
+                img.src = repo.icon;
+                img.height = 52;
+                
+                
+    
+                repo_link = document.createElement("div")
+                repo_link.textContent = repo.repository_link;
+                 
+                repo_link1=document.createElement("div")
+                repo_link1.textContent=repo.repository_link2;
+
+
+    
+    
+                description = document.createElement("div")
+                description.textContent = " ⚡" + repo.description;
+
+                description1=document.createElement("div")
+                description1.textContent= "Mit License :"+repo.description1;
+
+                rating=document.createElement("div")
+                rating.textContent=" ★ "+repo.rating;
+    
+                div.appendChild(img);
+                div.appendChild(repo_link);
+                div.appendChild(description);
+                div.appendChild(repo_link1);
+                div.appendChild(description1);
+                div.appendChild(rating);
+                div.appendChild(inner);
+                element.appendChild(div);
+            });
+    
+        </script>
+
+</body>
