@@ -367,6 +367,7 @@
                         "license": null,
                         "allow_forking": true,
                         "is_template": false,
+                        //"language":"python",
                         "topics": [
                             "python",
                             "python3"
@@ -2868,7 +2869,8 @@
                     "description": value.description,
                     "language":value.language,
                     "updated_time":value.pushed_at,
-                    "rating":value.rating,
+                    "rating":value.stargazers_count,
+                    "forks":value.forks,
                     
                     
                 }
@@ -2883,58 +2885,67 @@
                 div.classList = "p-3 border bg-light row" ;
                 let inner = document.createElement("p");
                 let img = document.createElement("img");
-                img.classList="col-1";
+                
+                parContainer=document.createElement("div")
+                parContainer.classList="row";
+
+                col2=document.createElement("div")
+                col2.classList="col-1";
                 img.src = repo.icon;
-                img.height = 52;
-                img.width=5;
+                img.height = 50;
+                img.width=30;
+                col2.appendChild(img);
 
+                col8=document.createElement("div")
+                col8.classList="col-7";
 
-                
-                
-                
-               
-                let div1=document.createElement("div");
-                div1.classList = "p-3 border bg-light row" ;
                 repository_link=document.createElement("a")
+                repository_link.href=repo.repository_link;
                 repository_link.textContent=repo.repository_link;
-                repository_link.classList="col-4";
                
                 
-                repository_link1=document.createElement("a")
-                repository_link1.textContent=repo.repository_link1;
-                repository_link.classList="col-4";
     
                 description = document.createElement("p")
                 description.textContent = " ⚡" + repo.description;
-                description.classList="col-4";
+               
+
+                repository_link1=document.createElement("a")
+                repository_link1.href=repo.repository_link1;
+                repository_link1.textContent=repo.repository_link1;
 
 
                 updated_time=document.createElement("p")
                 updated_time.textContent="Mit License . updated "+moment(repo.updated_time,"YYYY-MM-DDTHH:mm:ssZ").fromNow();
-                updated_time.classList="col-4";
 
-                
-                
+                col8.appendChild(repository_link);
+                col8.appendChild(description);
+                col8.appendChild(repository_link1);
+                col8.appendChild(updated_time);
 
-
-                let div2=document.createElement("div");
-                div.classList = "p-3 border bg-light" ;
+                container=document.createElement("div")
+                container.classList="col-4";
+               
                 language=document.createElement("span")
                 language.textContent= " ● "+repo.language;
-                language.classList="col-4";
-
-                
+               
 
                 rating=document.createElement("span")
-                rating.textContent=" ★ "+repo.rating;
-    
-                div.appendChild(img);
-                div.appendChild(repository_link);
-                div.appendChild(description);
-                div.appendChild(repository_link1);
-                div.appendChild(updated_time);
-                div.appendChild(language);
-                div.appendChild(rating);
+                rating.textContent=" ★ "+(Math.round(repo.rating)/10000).toFixed(2)+"w";
+
+                forks=document.createElement("span")
+                forks.textContent=" ౪ "+(Math.round(repo.forks)/10000).toFixed(2)+"w"; 
+
+               
+
+               container.appendChild(language);
+                container.appendChild(rating);
+                container.appendChild(forks);
+                parContainer.appendChild(col2);
+                parContainer.appendChild(col8);
+                parContainer.appendChild(container);
+
+                div.appendChild(parContainer);
+                
                 div.appendChild(inner);
                 element.appendChild(div);
             });
