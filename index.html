@@ -2871,6 +2871,8 @@
                     "updated_time":value.pushed_at,
                     "rating":value.stargazers_count,
                     "forks":value.forks,
+                    "full_name":value.full_name,
+                    "login":value["owner"]["login"]
                     
                     
                 }
@@ -2901,7 +2903,7 @@
 
                 repository_link=document.createElement("a")
                 repository_link.href=repo.repository_link;
-                repository_link.textContent=repo.repository_link;
+                repository_link.textContent=repo.full_name;
                
                 
     
@@ -2911,7 +2913,7 @@
 
                 repository_link1=document.createElement("a")
                 repository_link1.href=repo.repository_link1;
-                repository_link1.textContent=repo.repository_link1;
+                repository_link1.textContent=repo.login;
 
 
                 updated_time=document.createElement("p")
@@ -2935,9 +2937,13 @@
                 forks=document.createElement("span")
                 forks.textContent=" ౪ "+(Math.round(repo.forks)/10000).toFixed(2)+"w"; 
 
-               
+                if(repo.language!=null)
+                {
+                    container.appendChild(language);
+                }
+                
 
-               container.appendChild(language);
+               
                 container.appendChild(rating);
                 container.appendChild(forks);
                 parContainer.appendChild(col2);
